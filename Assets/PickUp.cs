@@ -50,6 +50,7 @@ public class PickUp : MonoBehaviour
         {
             HitObject.AddComponent<FixedJoint>();
             HitObject.GetComponent<FixedJoint>().connectedBody = Hand.GetComponent<Rigidbody>();
+	    HitObject.GetComponent<FixedJoint>().enablePreprocessing = false;
             IsPick = true;
             PickObject = HitObject;
         }
